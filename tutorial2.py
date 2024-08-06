@@ -20,6 +20,9 @@ class Worker(Person):
     def __init__(self, name, age, height, salary):
         super(Worker, self).__init__(name, age, height)
         self.salary = salary
+    
+    def __str__(self):
+        return super(Worker, self).__str__() + f" Salary {self.salary}"
 
     def calc_yearly_salary(self):
         return self.salary * 12
